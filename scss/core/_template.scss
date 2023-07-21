@@ -1,0 +1,70 @@
+// Main wrappers =====================================
+
+body {
+    display: flex;
+    height: auto;
+    min-height: 100%;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: $main_font_size;
+    // min-height: 100%;
+    height: 100vh;
+    position: relative;
+    color: $main_color;
+
+    .dark & {
+        color: $dark_theme_color;
+        background: $dark_theme_background;
+    }
+
+    @media (min-width: 768px) {
+        font-size: calc(.011713 * 100vw + 0px);
+        // height: calc(100vh - 3.25em);
+    }
+
+    @media (min-width: 1366px) {
+        font-size: $main_font_size;
+    }
+
+    @media (min-width: 1400px) {
+        // font-size: calc(.00838 * 100vw + 0px);
+    }
+
+    @media (min-width: 1600px) {}
+
+}
+
+/* Middle
+ ----------------------------------------------------------------------------- */
+.cor_main {
+    flex-grow: 1;
+    display: flex;
+	background: $light_theme_background;
+    max-height: 100%;
+    min-height: 0;
+
+	.dark & {
+		background: $dark_theme_background;
+	}
+}
+
+.desktop {
+    @media (max-width: 767px) {
+        display: none !important;
+    }
+}
+
+.mobile {
+    @media (min-width: 768px) {
+        display: none !important;
+    }
+}
+
+// Скрыл iframe который постоянно вылезает в body
+body > iframe {
+    height: 0 !important;
+}

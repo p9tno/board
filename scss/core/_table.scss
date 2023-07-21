@@ -1,0 +1,89 @@
+// @import "../variables/variables";
+
+table.cor_table {
+	width: 100%;
+	border-collapse: collapse;
+	// table-layout: fixed;
+	position: relative;
+	z-index: 1;
+
+	thead {
+		tr {
+			font-weight: 400;
+			&:before {
+				background: #D7E1E8;
+
+				.dark & {
+					background: #16171D;
+				}
+			}
+		}
+	}
+	
+	th, td {
+		vertical-align: middle;
+		font-size: 0.875em;
+		padding: 1em 1.25em;
+		&:first-child {
+			padding-left: 1.25em;
+		}
+	}
+
+	th {
+		color: #444754;
+		text-align: left;
+		font-weight: normal;	
+
+		.dark & {
+			color: #C7C9D1;
+		}
+	}
+
+	td {
+		color: $main_color;
+
+		.dark & {
+			color: $color_withe;
+		}	
+	}
+
+	tr {
+		position: relative;
+		// z-index: 1;
+
+		&:before {
+		  content: '';
+		  display: block;
+		  position: absolute;
+		  z-index: -1;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  border-radius: 0.25em;
+		}
+	}
+	
+	tbody {
+		tr {
+			&:nth-child(even) {
+				&:before {
+					background: #F0F3F5;
+
+					.dark & {
+						background: #282B33;
+					}
+				}
+			}
+
+			&:nth-child(odd) {
+				&:before {
+					.dark & {
+						background: #363A45;
+					}	
+				}
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,152 @@
+@import "../../scss/variables/variables";
+
+.cor_main .modal, .cor_header .modal {
+    display: none;
+    background: rgba(#2B3C4F, 0.5);
+    color: #1E1F25;
+
+    .dark & {
+        color: $dark_theme_color;
+        background: rgba(#4F5E70, 0.5);
+    }
+
+    &.open {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__close {
+        position: absolute;
+        right: 2.15em;
+        top: 1.75em;
+        width: 0.9em;
+        height: 0.9em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        cursor: pointer;
+        transition: color 0.3s;
+        color: #666F7E;
+
+        .dark & {
+            color: #C7C9D1;
+        }
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            border-top: 1px solid;
+            width: 100%;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            color: $color_primary;
+        }
+    }
+
+    &__dialog {
+        // margin-top: 6em;
+        position: relative;
+        width: 100%;
+        max-width: 35em;
+        padding: 1.875em;
+        border-radius: 0.625em;
+        animation: showModal 0.5s;
+        background-color: $light_theme_background;
+        // box-shadow: 0 0 1.3em rgba($color_primary, 0.8);
+        // text-align: center;
+
+        .dark & {
+            // background-color: $dark_theme_background;
+            background-color: #282B33;
+        }
+
+        &_lg {
+            max-width: 65em;
+        }
+        
+        &_md {
+            max-width: 43.125em;
+        }
+
+        &_sm {
+            max-width: 33em;
+        }
+
+        &_xs {
+            max-width: 27.5em;
+        }
+    }
+
+    &__message {
+        font-size: 1.125em;
+        line-height: 1.22;
+        font-weight: 600;
+        margin: 0 0 1.1em;
+        padding-right: 2em;
+        color: #1E1F25;
+
+        .dark & {
+            color: $color_withe;
+        }
+    }
+
+    &__body {
+        margin: 1.25em 0;
+    }
+
+    &__action {
+        margin-top: 1.25em;
+        display: flex;
+        gap: 1.25em;
+
+        .cor_btn {
+            flex-grow: 1;
+            width: 15.1em;
+        }
+
+        &_end {
+            justify-content: flex-end;
+
+            .cor_btn {
+                flex-grow: 0;
+            }
+        }
+
+        &_start {
+            justify-content: flex-start;
+
+            .cor_btn {
+                flex-grow: 0;
+            }
+        }
+    }
+}
+
+@keyframes showModal {
+    0% {
+        transform: translateY(2em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

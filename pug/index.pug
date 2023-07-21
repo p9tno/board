@@ -1,0 +1,77 @@
+extends layout/layout.pug
+
+block content
+    .tool__position
+        .tool
+            .tool__conetnt
+                .tool__naw
+                    //- start tool__part
+                    .tool__part
+                        .tool__btn
+                            i.cor_icon_picture
+                            span.tool__label Вставить фото
+                    //- end tool__part
+
+                    //- start tool__part_children
+                    .tool__part.tool__part_children
+                        //- start .tool__btn
+                        .tool__btn
+                            i.cor_icon_pen-tool
+                            span.tool__label Инструменты
+                                i.cor_icon_show-more
+                            ul.tool__list
+                                li.tool__item(id="toolID-Straight" title="Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]")
+                                    i.cor_icon_back-round.active
+                                    span Прямая линия
+
+                                each item in ['', '', '' ]
+                                    li.tool__item(id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]")
+                                        i.cor_icon_brush
+                                        span карандаш
+                        //- end .tool__btn
+                        //- start .tool__btn
+                        .tool__btn
+                            i.cor_icon_brush
+                            span.tool__label Кисть
+                                i.cor_icon_show-more
+                            ul.tool__list
+                                li.tool__item(id="toolID-Straight" title="Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]")
+                                    i.cor_icon_back-round
+                                    span Прямая линия
+
+                                each item in ['', '', '' ]
+                                    li.tool__item(id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]")
+                                        i.cor_icon_brush
+                                        span карандаш
+                        //- end .tool__btn        
+                        //- start .tool__btn
+                        .tool__btn
+                            i.cor_icon_figure
+                            span.tool__label Формы
+                                i.cor_icon_show-more
+                            ul.tool__list
+                                li.tool__item(id="toolID-Straight" title="Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]")
+                                    i.cor_icon_back-round
+                                    span Прямая линия
+
+                                each item in ['', '', '' ]
+                                    li.tool__item(id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]")
+                                        i.cor_icon_brush
+                                        span карандаш
+                        //- end .tool__btn
+
+                    //- end tool__part_children
+
+                    //- start tool__part
+                    //- .tool__part.tool__part_color
+                    //-     input(type="color" id="chooseColor" value="#1913B0")
+
+
+                    //- end tool__part
+
+                    //- start tool__part
+                    .tool__part
+                        .tool__btn
+                            i.cor_icon_trash
+                            span.tool__label Очистить
+                    //- end tool__part

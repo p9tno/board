@@ -1,0 +1,32 @@
+.cor_checkbox {
+	display: flex;
+	align-items: center;
+
+	input[type=checkbox] {
+		width: 1.3em;
+		height: 1.3em;
+		flex: none;
+		margin-right: 0.5em;
+		border: 1px solid #BEC9D3;
+		border-radius: 2px;
+		cursor: pointer;
+
+		&:checked, &:indeterminate {
+			background: #00B5FF;
+			border: 1px solid #00B5FF;
+
+			&:before {
+				font-size: 0.8em;
+			}
+		}
+
+		&:disabled {
+			opacity: 0.8;
+			cursor: default;
+
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+}

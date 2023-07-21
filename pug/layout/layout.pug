@@ -1,0 +1,36 @@
+block variable
+    -var path = '';
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+
+
+        link(rel="stylesheet", type="text/css", href=path + "css/styles.css")
+    body
+        #root
+            header.cor_header
+                .cor_themeSwitcher
+                    span.cor_icon
+                        i.cor_icon_sun
+                    input(type="checkbox").cor_switcher#cor_switcher
+                    span.cor_icon
+                        i.cor_icon_moon
+
+
+
+            main.cor_main
+                .cor_navbar navbar
+                .cor_dashboard
+                    .cor_dashboard__title cor_dashboard__title
+                    .cor_dashboard__content
+                        block content
+                    footer.cor_footer
+                .cor_aside aside
+
+
+            include scripts.pug
