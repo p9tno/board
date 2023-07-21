@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Global variables */
 /* ======================================================================== */
 /* Grid */
@@ -1032,6 +1033,63 @@ body > iframe {
   background: #282B33;
   border: 1px solid #343640;
   color: #FFFFFF;
+}
+.tool__fontweight {
+  position: relative;
+  /* Для Chrome */
+}
+.tool__fontweight input[type=number] {
+  background-color: transparent;
+  border: 0;
+  font-family: "Inter";
+  color: #666F7E;
+  padding: 0 0.5em 0 0;
+  outline: none;
+  font-size: 0.875em;
+  font-weight: 400;
+  border-radius: 0.3125em;
+  transition: 0.3s;
+  text-align: center;
+}
+.tool__fontweight input[type=search]::-webkit-search-cancel-button,
+.tool__fontweight input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+          appearance: none;
+}
+.tool__fontweight input[type=number]::-webkit-inner-spin-button,
+.tool__fontweight input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.tool__fontweight .minus,
+.tool__fontweight .plus {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 1;
+  color: #A2A6B6;
+  position: absolute;
+  right: 0;
+  font-size: 0.5em;
+}
+.tool__fontweight .minus i,
+.tool__fontweight .plus i {
+  font-weight: bold;
+}
+.tool__fontweight .minus {
+  bottom: 0;
+}
+.tool__fontweight .plus {
+  top: 0;
+}
+.tool__fontweight .plus i {
+  display: inline-block;
+  transform: scale(-1);
 }
 @keyframes fadeLeft {
   0% {

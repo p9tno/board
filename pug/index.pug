@@ -63,9 +63,14 @@ block content
                     //- end tool__part_children
 
                     //- start tool__part
-                    //- .tool__part.tool__part_color
-                    //-     input(type="color" id="chooseColor" value="#1913B0")
+                    .tool__part.tool__part_color
+                        .tool__preview
+                        .tool__fontweight
+                            <button class="minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"><i class="cor_icon_show-more"></i></button>
 
+                            <input type="number" step="1" min="1" max="32" value="4" readonly>
+
+                            <button class="plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"><i class="cor_icon_show-more"></i></button>
 
                     //- end tool__part
 
