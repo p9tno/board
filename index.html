@@ -21,47 +21,38 @@
           <div class="cor_dashboard__content">
             <div class="tool__position">
               <div class="tool">
-                <div class="tool__conetnt">
-                  <div class="tool__naw">
-                    <div class="tool__part">
-                      <div class="tool__btn"><i class="cor_icon_picture"></i><span class="tool__label">Вставить фото</span></div>
-                    </div>
-                    <div class="tool__part tool__part_children">
-                      <div class="tool__btn"><i class="cor_icon_pen-tool"></i><span class="tool__label">Инструменты<i class="cor_icon_show-more"></i></span>
-                        <ul class="tool__list">
-                          <li class="tool__item" id="toolID-Straight" title="Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]"><i class="cor_icon_back-round active"></i><span>Прямая линия</span></li>
-                          <li class="tool__item" id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]"><i class="cor_icon_brush"></i><span>карандаш</span></li>
-                          <li class="tool__item" id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]"><i class="cor_icon_brush"></i><span>карандаш</span></li>
-                          <li class="tool__item" id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]"><i class="cor_icon_brush"></i><span>карандаш</span></li>
-                        </ul>
-                      </div>
-                      <div class="tool__btn"><i class="cor_icon_brush"></i><span class="tool__label">Кисть<i class="cor_icon_show-more"></i></span>
-                        <ul class="tool__list">
-                          <li class="tool__item" id="toolID-Straight" title="Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]"><i class="cor_icon_back-round"></i><span>Прямая линия</span></li>
-                          <li class="tool__item" id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]"><i class="cor_icon_brush"></i><span>карандаш</span></li>
-                          <li class="tool__item" id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]"><i class="cor_icon_brush"></i><span>карандаш</span></li>
-                          <li class="tool__item" id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]"><i class="cor_icon_brush"></i><span>карандаш</span></li>
-                        </ul>
-                      </div>
-                      <div class="tool__btn"><i class="cor_icon_figure"></i><span class="tool__label">Формы<i class="cor_icon_show-more"></i></span>
-                        <ul class="tool__list">
-                          <li class="tool__item" id="toolID-Straight" title="Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]"><i class="cor_icon_back-round"></i><span>Прямая линия</span></li>
-                          <li class="tool__item" id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]"><i class="cor_icon_brush"></i><span>карандаш</span></li>
-                          <li class="tool__item" id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]"><i class="cor_icon_brush"></i><span>карандаш</span></li>
-                          <li class="tool__item" id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]"><i class="cor_icon_brush"></i><span>карандаш</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="tool__part tool__part_color">
-                      <div class="tool__preview"></div>
-                      <div class="tool__fontweight"><button class="minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"><i class="cor_icon_show-more"></i></button>
-<input type="number" step="1" min="1" max="32" value="4" readonly>
-<button class="plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"><i class="cor_icon_show-more"></i></button>
-                      </div>
-                    </div>
-                    <div class="tool__part">
-                      <div class="tool__btn"><i class="cor_icon_trash"></i><span class="tool__label">Очистить</span></div>
-                    </div>
+                <div class="tool__row">
+                  <div class="tool__col">
+                    <ul class="tool__list">
+                      <li class="tool__item active" id="tool-id-1" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]"><i class="cor_icon_tassel"></i></li>
+                      <li class="tool__item" id="tool-id-2" title="Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]"><i class="cor_icon_tassel"></i></li>
+                      <li class="tool__item" id="tool-id-3" title="Прямоугольник (горячая клавиша: r) [нажмите, чтобы переключиться]"><i class="cor_icon_rectangle"></i></li>
+                      <li class="tool__item" id="tool-id-4" title="Эллипс (горячая клавиша: c) [нажмите, чтобы переключиться]"><i class="cor_icon_ellipse"></i></li>
+                      <li class="tool__item" id="tool-id-5" title="Текст (горячая клавиша: t)"><i class="cor_icon_text"></i></li>
+                      <li class="tool__item" id="tool-id-6" title="Рука (горячая клавиша: h) [нажмите, чтобы переключиться]"><i class="cor_icon_hand"></i></li>
+                      <li class="tool__item" id="tool-id-7" title="Ластик (горячая клавиша: e)"><i class="cor_icon_eraser"></i></li>
+                      <li class="tool__item" id="tool-id-8" title="Лупа (горячая клавиша: z)"><i class="cor_icon_glass"></i></li>
+                      <li class="tool__item" id="tool-id-9" title="picture"><i class="cor_icon_picture"></i></li>
+                    </ul>
+                  </div>
+                  <div class="tool__col">
+                    <ul class="tool__list">
+                      <li class="tool__item tool__item_weihgt">
+                        <div class="tool__preview"><span style="width: 8px; height: 8px; background: #F9DE80;"></span></div>
+                        <div class="tool__buttons"><button class="minus" id="weihgtMinus" type="button"><i class="cor_icon_show-more"></i></button>
+<input id="weihgt" type="number" step="1" min="3" max="24" value="8" readonly>
+<button class="plus" id="weihgtPlus" type="button"><i class="cor_icon_show-more"></i></button>
+                        </div>
+                      </li>
+                      <li class="tool__item"></li>
+                      <li class="tool__item"></li>
+                    </ul>
+                  </div>
+                  <div class="tool__col">
+                    <ul class="tool__list">
+                      <li class="tool__item" id="tool-id-10" title="Сетка (горячая клавиша: g)"><i class="cor_icon_lattice"></i></li>
+                      <li class="tool__item" id="tool-id-11" title="Скачать (горячая клавиша: d)"><i class="cor_icon_download"></i></li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -71,6 +62,7 @@
         </div>
         <div class="cor_aside">aside</div>
       </main>
+      <script src="js/jquery.js"></script>
       <script src="js/function.js"></script>
     </div>
   </body>

@@ -3,9 +3,9 @@
 @font-face {
   font-family: '#{$icomoon-font-family}';
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?8iua9s') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?8iua9s') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?8iua9s##{$icomoon-font-family}') format('svg');
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?w5uc0g') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?w5uc0g') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?w5uc0g##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -221,6 +221,21 @@
     content: $cor_icon_electricity; 
   }
 }
+.cor_icon_ellipse {
+  &:before {
+    content: $cor_icon_ellipse; 
+  }
+}
+.cor_icon_eraser {
+  &:before {
+    content: $cor_icon_eraser; 
+  }
+}
+.cor_icon_eye {
+  &:before {
+    content: $cor_icon_eye; 
+  }
+}
 .cor_icon_figure {
   &:before {
     content: $cor_icon_figure; 
@@ -286,6 +301,11 @@
     content: $cor_icon_gear; 
   }
 }
+.cor_icon_glass {
+  &:before {
+    content: $cor_icon_glass; 
+  }
+}
 .cor_icon_grid {
   &:before {
     content: $cor_icon_grid; 
@@ -299,6 +319,11 @@
 .cor_icon_info {
   &:before {
     content: $cor_icon_info; 
+  }
+}
+.cor_icon_lattice {
+  &:before {
+    content: $cor_icon_lattice; 
   }
 }
 .cor_icon_lens-left {
@@ -456,6 +481,11 @@
     content: $cor_icon_print; 
   }
 }
+.cor_icon_protractor {
+  &:before {
+    content: $cor_icon_protractor; 
+  }
+}
 .cor_icon_question {
   &:before {
     content: $cor_icon_question; 
@@ -464,6 +494,11 @@
 .cor_icon_question-circle {
   &:before {
     content: $cor_icon_question-circle; 
+  }
+}
+.cor_icon_rectangle {
+  &:before {
+    content: $cor_icon_rectangle; 
   }
 }
 .cor_icon_reload {
@@ -479,6 +514,11 @@
 .cor_icon_rocket {
   &:before {
     content: $cor_icon_rocket; 
+  }
+}
+.cor_icon_ruler {
+  &:before {
+    content: $cor_icon_ruler; 
   }
 }
 .cor_icon_save {
@@ -581,9 +621,19 @@
     content: $cor_icon_task; 
   }
 }
+.cor_icon_tassel {
+  &:before {
+    content: $cor_icon_tassel; 
+  }
+}
 .cor_icon_teacher {
   &:before {
     content: $cor_icon_teacher; 
+  }
+}
+.cor_icon_text {
+  &:before {
+    content: $cor_icon_text; 
   }
 }
 .cor_icon_transmission {

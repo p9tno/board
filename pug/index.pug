@@ -3,80 +3,38 @@ extends layout/layout.pug
 block content
     .tool__position
         .tool
-            .tool__conetnt
-                .tool__naw
-                    //- start tool__part
-                    .tool__part
-                        .tool__btn
-                            i.cor_icon_picture
-                            span.tool__label Вставить фото
-                    //- end tool__part
+            .tool__row
+                //- start col
+                .tool__col
+                    ul.tool__list
+                        li.tool__item.active(id="tool-id-1" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]")
+                            i(class="cor_icon_tassel")
+                        each item in [ {id: '2', title: 'Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]', icon: 'tassel', tp: ''}, {id: '3', title: 'Прямоугольник (горячая клавиша: r) [нажмите, чтобы переключиться]', icon: 'rectangle', tp: ''}, {id: '4', title: 'Эллипс (горячая клавиша: c) [нажмите, чтобы переключиться]', icon: 'ellipse', tp: ''}, {id: '5', title: 'Текст (горячая клавиша: t)', icon: 'text', tp: ''}, {id: '6', title: 'Рука (горячая клавиша: h) [нажмите, чтобы переключиться]', icon: 'hand', tp: ''}, {id: '7', title: 'Ластик (горячая клавиша: e)', icon: 'eraser', tp: ''}, {id: '8', title: 'Лупа (горячая клавиша: z)', icon: 'glass', tp: ''}, {id: '9', title: 'picture', icon: 'picture', tp: '11'},  ]
+                            li.tool__item(id="tool-id-"+item.id+"" title=""+item.title+"")
+                                i(class="cor_icon_"+item.icon+"")
+                //- end col
 
-                    //- start tool__part_children
-                    .tool__part.tool__part_children
-                        //- start .tool__btn
-                        .tool__btn
-                            i.cor_icon_pen-tool
-                            span.tool__label Инструменты
-                                i.cor_icon_show-more
-                            ul.tool__list
-                                li.tool__item(id="toolID-Straight" title="Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]")
-                                    i.cor_icon_back-round.active
-                                    span Прямая линия
+                //- start col
+                .tool__col
+                    ul.tool__list
+                        li.tool__item.tool__item_weihgt
+                            .tool__preview
+                                span(style="width: 8px; height: 8px; background: #F9DE80;")
+                            .tool__buttons
+                                <button class="minus" id="weihgtMinus" type="button"><i class="cor_icon_show-more"></i></button>
+                                <input id="weihgt" type="number" step="1" min="3" max="24" value="8" readonly>
+                                <button class="plus" id="weihgtPlus" type="button"><i class="cor_icon_show-more"></i></button>
+                        li.tool__item
 
-                                each item in ['', '', '' ]
-                                    li.tool__item(id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]")
-                                        i.cor_icon_brush
-                                        span карандаш
-                        //- end .tool__btn
-                        //- start .tool__btn
-                        .tool__btn
-                            i.cor_icon_brush
-                            span.tool__label Кисть
-                                i.cor_icon_show-more
-                            ul.tool__list
-                                li.tool__item(id="toolID-Straight" title="Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]")
-                                    i.cor_icon_back-round
-                                    span Прямая линия
+                        li.tool__item
 
-                                each item in ['', '', '' ]
-                                    li.tool__item(id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]")
-                                        i.cor_icon_brush
-                                        span карандаш
-                        //- end .tool__btn        
-                        //- start .tool__btn
-                        .tool__btn
-                            i.cor_icon_figure
-                            span.tool__label Формы
-                                i.cor_icon_show-more
-                            ul.tool__list
-                                li.tool__item(id="toolID-Straight" title="Прямая линия (горячая клавиша: l) [нажмите, чтобы переключиться]")
-                                    i.cor_icon_back-round
-                                    span Прямая линия
 
-                                each item in ['', '', '' ]
-                                    li.tool__item(id="toolID-Pencil" title="Карандаш (горячая клавиша: p) [нажмите, чтобы переключиться]")
-                                        i.cor_icon_brush
-                                        span карандаш
-                        //- end .tool__btn
+                //- end col
 
-                    //- end tool__part_children
-
-                    //- start tool__part
-                    .tool__part.tool__part_color
-                        .tool__preview
-                        .tool__fontweight
-                            <button class="minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"><i class="cor_icon_show-more"></i></button>
-
-                            <input type="number" step="1" min="1" max="32" value="4" readonly>
-
-                            <button class="plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"><i class="cor_icon_show-more"></i></button>
-
-                    //- end tool__part
-
-                    //- start tool__part
-                    .tool__part
-                        .tool__btn
-                            i.cor_icon_trash
-                            span.tool__label Очистить
-                    //- end tool__part
+                //- start col
+                .tool__col
+                    ul.tool__list
+                        each item in [ {id: '10', title: 'Сетка (горячая клавиша: g)', icon: 'lattice', tp: ''}, {id: '11', title: 'Скачать (горячая клавиша: d)', icon: 'download', tp: ''} ]
+                            li.tool__item(id="tool-id-"+item.id+"" title=""+item.title+"")
+                                i(class="cor_icon_"+item.icon+"")
+                //- end col
