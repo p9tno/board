@@ -15,9 +15,7 @@
         </div>
       </header>
       <main class="cor_main">
-        <div class="cor_navbar">navbar</div>
         <div class="cor_dashboard">
-          <div class="cor_dashboard__title">cor_dashboard__title</div>
           <div class="cor_dashboard__content">
             <div class="tool__position">
               <div class="tool">
@@ -38,14 +36,24 @@
                   <div class="tool__col">
                     <ul class="tool__list">
                       <li class="tool__item tool__item_weihgt">
-                        <div class="tool__preview"><span style="width: 8px; height: 8px; background: #F9DE80;"></span></div>
-                        <div class="tool__buttons"><button class="minus" id="weihgtMinus" type="button"><i class="cor_icon_show-more"></i></button>
+                        <div class="tool__weihgt"><span style="width: 8px; height: 8px; background: #F9DE80;"></span></div>
+                        <div class="tool__change"><button class="minus" id="weihgtMinus" type="button"><i class="cor_icon_show-more"></i></button>
 <input id="weihgt" type="number" step="1" min="3" max="24" value="8" readonly>
 <button class="plus" id="weihgtPlus" type="button"><i class="cor_icon_show-more"></i></button>
                         </div>
                       </li>
-                      <li class="tool__item"></li>
-                      <li class="tool__item"></li>
+                      <li class="tool__item tool__item_color">
+                        <div class="tool__color"><span style="background-color: #F9DE80"></span></div>
+                        <div class="tool__select"><span title="горячая клавиша: 1" style="background-color: #CE5A92"></span><span title="горячая клавиша: 2" style="background-color: #E180F9"></span><span title="горячая клавиша: 3" style="background-color: #8B96FA"></span><span title="горячая клавиша: 4" style="background-color: #81B8F9"></span><span title="горячая клавиша: 5" style="background-color: #81F2F9"></span><span title="горячая клавиша: 6" style="background-color: #4EE4AE"></span><span title="горячая клавиша: 7" style="background-color: #C2D83F"></span><span title="горячая клавиша: 8" style="background-color: #F9DE80"></span><span title="горячая клавиша: 9" style="background-color: #EF884E"></span><span title="горячая клавиша: 0" style="background-color: #F35151"></span>
+                        </div>
+                      </li>
+                      <li class="tool__item tool__item_opacity">
+                        <div class="tool__opacity"><i class="cor_icon_eye" style="opacity: 15%;"></i></div>
+                        <div class="tool__change"><button class="minus" id="opacityMinus" type="button"><i class="cor_icon_show-more"></i></button>
+<input id="weihgt" type="number" step="5" min="10" max="100" value="15" readonly>
+<button class="plus" id="opacityPlus" type="button"><i class="cor_icon_show-more"></i></button>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                   <div class="tool__col">
@@ -60,7 +68,6 @@
           </div>
           <footer class="cor_footer"></footer>
         </div>
-        <div class="cor_aside">aside</div>
       </main>
       <script src="js/jquery.js"></script>
       <script src="js/function.js"></script>

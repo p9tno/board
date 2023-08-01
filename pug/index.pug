@@ -18,15 +18,30 @@ block content
                 .tool__col
                     ul.tool__list
                         li.tool__item.tool__item_weihgt
-                            .tool__preview
+                            .tool__weihgt
                                 span(style="width: 8px; height: 8px; background: #F9DE80;")
-                            .tool__buttons
+                            .tool__change
                                 <button class="minus" id="weihgtMinus" type="button"><i class="cor_icon_show-more"></i></button>
                                 <input id="weihgt" type="number" step="1" min="3" max="24" value="8" readonly>
                                 <button class="plus" id="weihgtPlus" type="button"><i class="cor_icon_show-more"></i></button>
-                        li.tool__item
 
-                        li.tool__item
+                        li.tool__item.tool__item_color
+                            .tool__color
+                                //- input(type="color" id="chooseColor" value="#F9DE80")
+                                span(style="background-color: #F9DE80")
+                            .tool__select
+                                each item in [ {title: '1', bg: '#CE5A92'}, {title: '2', bg: '#E180F9'}, {title: '3', bg: '#8B96FA'}, {title: '4', bg: '#81B8F9'}, {title: '5', bg: '#81F2F9'}, {title: '6', bg: '#4EE4AE'}, {title: '7', bg: '#C2D83F'}, {title: '8', bg: '#F9DE80'}, {title: '9', bg: '#EF884E'}, {title: '0', bg: '#F35151'}, ]
+                                    span(title="горячая клавиша: "+item.title+"" style="background-color: "+item.bg+"")
+
+
+
+                        li.tool__item.tool__item_opacity
+                            .tool__opacity
+                                i.cor_icon_eye(style="opacity: 15%;")
+                            .tool__change
+                                <button class="minus" id="opacityMinus" type="button"><i class="cor_icon_show-more"></i></button>
+                                <input id="weihgt" type="number" step="5" min="10" max="100" value="15" readonly>
+                                <button class="plus" id="opacityPlus" type="button"><i class="cor_icon_show-more"></i></button>
 
 
                 //- end col

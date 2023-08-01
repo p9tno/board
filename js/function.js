@@ -1,29 +1,18 @@
-
-
-const checkbox = document.getElementById('cor_switcher');
-const root = document.getElementById('root');
-checkbox.addEventListener('change', () => {
-    if (checkbox.checked) {
-        root.classList.add("dark");
-    } else {
-        root.classList.remove("dark");
-    }
-})
-
-
-
-// const inputWeihgt = document.getElementById('weihgt');
-// // const output = document.getElementById('test');
-//
-// inputWeihgt.addEventListener('input', (event) => {
-//   // output.innerText = event.target.value;
-//   console.log(event.target.value);
-// }, true);
-
-
 jQuery(function($) {
 
+    $('.cor_switcher').on('change', function () {
+        if ( $(this).prop('checked') ) {
+            $('#root').addClass('dark');
+        } else {
+            $('#root').removeClass('dark');
+        }
+    });
+
     $(document.body).on('click', '.minus, .plus', function() {
+        let wrap = $(this).closest('.tool__change');
+        let buttonMinus = wrap.find('.minus');
+        let buttonPlus = wrap.find('.plus');
+
         let qty = $(this).parent().find( 'input' );
         let	val = parseInt( qty.val() );
         let	min = parseInt( qty.attr( 'min' ) );
@@ -39,32 +28,24 @@ jQuery(function($) {
         } else {
             if ( min && ( min >= val ) ) {
                 qty.val( min );
-
-
             } else if ( val > 1 ) {
                 qty.val( val - step );
             }
         }
 
-
-
         let quantity = parseInt(qty.val());
-        // console.log(quantity);
-        // console.log(this);
-
-
 
 
         if (quantity == min) {
-            $('#weihgtMinus').addClass('disabled');
+            buttonMinus.addClass('disabled');
         } else {
-            $('#weihgtMinus').removeClass('disabled');
+            buttonMinus.removeClass('disabled');
         }
 
         if (quantity == max) {
-            $('#weihgtPlus').addClass('disabled');
+            buttonPlus.addClass('disabled');
         } else {
-            $('#weihgtPlus').removeClass('disabled');
+            buttonPlus.removeClass('disabled');
         }
 
         $('.tool__preview span').css({
@@ -72,19 +53,14 @@ jQuery(function($) {
             "height" : (quantity) + "px",
         });
 
+        $('.tool__opacity i').css({
+            "opacity" : (quantity) + "%"
+        });
+
     })
 
-    function disabledButton(plus, minus, quantity, min, max) {
-        if (quantity == min) {
-            minus.addClass('disabled');
-        } else {
-            minus.removeClass('disabled');
-        }
+    // $('#chooseColor').click(function(event) {
+    //     event.preventDefault();
+    // });
 
-        if (quantity == max) {
-            plus.addClass('disabled');
-        } else {
-            plus.removeClass('disabled');
-        }
-    }
 });
